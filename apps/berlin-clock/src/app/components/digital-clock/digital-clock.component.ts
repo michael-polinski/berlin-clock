@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {DateProvider} from "./date-provider";
+import { Observable } from 'rxjs';
+import { DateProviderService } from '../../services/date-provider.service';
 
 /**
  * Component that mimics a digital clock and displays the current time. The time value is provided by an
@@ -20,8 +20,8 @@ export class DigitalClockComponent implements OnInit {
   /**
    * Constructor.
    */
-  constructor() {
-    this.dateProvider = DateProvider.asObservable();
+  constructor(private dateProviderService: DateProviderService) {
+    this.dateProvider = dateProviderService.date$;
   }
 
   /**

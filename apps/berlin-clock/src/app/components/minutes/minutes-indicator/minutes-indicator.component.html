@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column">
+    <div class="d-flex flex-row justify-content-center">
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 5"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 10"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'accent'"
+        [active]="amountOfMinutes$ | async | isMin: 15"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 20"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 25"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'accent'"
+        [active]="amountOfMinutes$ | async | isMin: 30"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 35"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 40"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'accent'"
+        [active]="amountOfMinutes$ | async | isMin: 45"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        [color]="'primary'"
+        [active]="amountOfMinutes$ | async | isMin: 50"></berlin-clock-single-minute-base-five-indicator>
+      <berlin-clock-single-minute-base-five-indicator
+        color="primary"
+        [active]="amountOfMinutes$ | async | isMin: 55"></berlin-clock-single-minute-base-five-indicator>
+    </div>
+    <div class="d-flex flex-row">
+      <berlin-clock-single-minute-base-two-indicator
+        [active]="amountOfMinutes$ | async | isMinModRest: 5 : 1"></berlin-clock-single-minute-base-two-indicator>
+      <berlin-clock-single-minute-base-two-indicator
+        [active]="amountOfMinutes$ | async | isMinModRest: 5 :  2"></berlin-clock-single-minute-base-two-indicator>
+      <berlin-clock-single-minute-base-two-indicator
+        [active]="amountOfMinutes$ | async | isMinModRest: 5 : 3"></berlin-clock-single-minute-base-two-indicator>
+      <berlin-clock-single-minute-base-two-indicator
+        [active]="amountOfMinutes$ | async | isMinModRest: 5 :  4"></berlin-clock-single-minute-base-two-indicator>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DigitalClockComponent } from './digital-clock.component';
-import {DateProvider} from "./date-provider";
 import {Observable, of} from "rxjs";
 
 /**
@@ -40,13 +39,4 @@ describe('DigitalClockComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('test that the component initializes as expected.', () => {
-    const expectedValue = of() as Observable<Date>;
-    const asObservableSpy = spyOn(DateProvider, 'asObservable').and.returnValue(expectedValue);
-
-    component.ngOnInit();
-
-    expect(asObservableSpy).toHaveBeenCalled();
-    expect(component.dateProvider).toEqual(expectedValue);
-  });
 });
