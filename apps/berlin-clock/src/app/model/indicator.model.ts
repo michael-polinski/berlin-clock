@@ -2,6 +2,7 @@
  * TODO
  */
 export interface IndicatorModel {
-  size: 'small' | 'normal',
-  color: 'primary' | 'accent'
+  size?: 'small' | 'normal';
+  shape?: 'circle' | 'rectangle';
+  color?: 'primary' | 'accent';
 }

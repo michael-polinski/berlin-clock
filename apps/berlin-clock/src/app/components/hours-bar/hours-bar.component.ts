@@ -15,29 +15,24 @@ import { ModuloRestIndicatorModel } from '../../model/modulo-rest-indicator.mode
 export class HoursBarComponent {
   hoursBaseFiveData: MinValueIndicatorModel[] = [
     {
-      size: 'normal',
       color: 'accent',
       minValue: 5
     },
     {
-      size: 'normal',
       color: 'accent',
       minValue: 10
     },
     {
-      size: 'normal',
       color: 'accent',
       minValue: 15
     },
     {
-      size: 'normal',
       color: 'accent',
       minValue: 20
     }
   ]
   hoursBaseOneData: ModuloRestIndicatorModel[] = [
     {
-      size: 'normal',
       color: 'accent',
       model: {
         modulo: 5,
@@ -45,7 +40,6 @@ export class HoursBarComponent {
       }
     },
     {
-      size: 'normal',
       color: 'accent',
       model: {
         modulo: 5,
@@ -53,7 +47,6 @@ export class HoursBarComponent {
       }
     },
     {
-      size: 'normal',
       color: 'accent',
       model: {
         modulo: 5,
@@ -61,7 +54,6 @@ export class HoursBarComponent {
       }
     },
     {
-      size: 'normal',
       color: 'accent',
       model: {
         modulo: 5,

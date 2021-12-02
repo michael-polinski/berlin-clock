@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RectangleIndicatorComponent } from './rectangle-indicator.component';
+import { IndicatorComponent } from './indicator.component';
 
 describe('RectangleIndicatorComponent', () => {
-  let component: RectangleIndicatorComponent;
-  let fixture: ComponentFixture<RectangleIndicatorComponent>;
+  let component: IndicatorComponent;
+  let fixture: ComponentFixture<IndicatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RectangleIndicatorComponent ]
+      declarations: [ IndicatorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RectangleIndicatorComponent);
+    fixture = TestBed.createComponent(IndicatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

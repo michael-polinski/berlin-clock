@@ -8,7 +8,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class IsMinPipe implements PipeTransform {
 
-  transform(value: null | number, minimum: number): boolean {
+  transform(value: number | null, minimum: number): boolean {
     if (value === null) {
       return false;
     }

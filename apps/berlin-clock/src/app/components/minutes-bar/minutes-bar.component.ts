@@ -17,12 +17,10 @@ export class MinutesBarComponent {
   minutesBaseFiveData: MinValueIndicatorModel[] = [
     {
       size: 'small',
-      color: 'primary',
       minValue: 5
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 10
     },
     {
@@ -32,12 +30,10 @@ export class MinutesBarComponent {
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 20
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 25
     },
     {
@@ -47,12 +43,10 @@ export class MinutesBarComponent {
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 35
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 40
     },
     {
@@ -62,43 +56,33 @@ export class MinutesBarComponent {
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 50
     },
     {
       size: 'small',
-      color: 'primary',
       minValue: 55
     },
   ]
   minutesBaseOneData: ModuloRestIndicatorModel[] = [
     {
-      size: 'normal',
-      color: 'primary',
       model: {
         modulo: 5,
         minimum: 1
       }
     },
     {
-      size: 'normal',
-      color: 'primary',
       model: {
         modulo: 5,
         minimum: 2
       }
     },
     {
-      size: 'normal',
-      color: 'primary',
       model: {
         modulo: 5,
         minimum: 3
       }
     },
     {
-      size: 'normal',
-      color: 'primary',
       model: {
         modulo: 5,
         minimum: 4

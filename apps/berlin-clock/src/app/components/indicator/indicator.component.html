@@ -1,0 +1,11 @@
+<div
+  class="m-2 indicator"
+  [ngClass]="{
+    'rectangle-indicator': model?.shape === 'rectangle',
+    'small-rectangle': model?.shape === 'rectangle' && model?.size === 'small',
+    'circle-indicator': model?.shape === 'circle',
+    'small-circle': model?.shape === 'circle' && model?.size === 'small',
+    'is-active-primary': active && model?.color === 'primary',
+    'is-active-accent': active && model?.color === 'accent'
+    }">
+</div>
