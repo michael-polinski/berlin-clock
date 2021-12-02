@@ -3,6 +3,7 @@ import { map, Observable } from 'rxjs';
 import { DateProviderService } from '../../services/date-provider.service';
 import { MinValueIndicatorModel } from '../../model/min-value-indicator.model';
 import { ModuloRestIndicatorModel } from '../../model/modulo-rest-indicator.model';
+import { IndicatorColor } from '../../model/indicator-color.enum';
 
 /**
  * TODO
@@ -15,46 +16,46 @@ import { ModuloRestIndicatorModel } from '../../model/modulo-rest-indicator.mode
 export class HoursBarComponent {
   hoursBaseFiveData: MinValueIndicatorModel[] = [
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       minValue: 5
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       minValue: 10
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       minValue: 15
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       minValue: 20
     }
   ]
   hoursBaseOneData: ModuloRestIndicatorModel[] = [
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       model: {
         modulo: 5,
         minimum: 1
       }
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       model: {
         modulo: 5,
         minimum: 2
       }
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       model: {
         modulo: 5,
         minimum: 3
       }
     },
     {
-      color: 'accent',
+      color: IndicatorColor.ACCENT,
       model: {
         modulo: 5,
         minimum: 4

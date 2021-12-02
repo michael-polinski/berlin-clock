@@ -3,6 +3,8 @@ import { map, Observable } from 'rxjs';
 import { DateProviderService } from '../../services/date-provider.service';
 import { MinValueIndicatorModel } from '../../model/min-value-indicator.model';
 import { ModuloRestIndicatorModel } from '../../model/modulo-rest-indicator.model';
+import { IndicatorSize } from '../../model/indicator-size.enum';
+import { IndicatorColor } from '../../model/indicator-color.enum';
 
 /**
  * TODO
@@ -16,50 +18,50 @@ export class MinutesBarComponent {
 
   minutesBaseFiveData: MinValueIndicatorModel[] = [
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 5
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 10
     },
     {
-      size: 'small',
-      color: 'accent',
+      size: IndicatorSize.SMALL,
+      color: IndicatorColor.ACCENT,
       minValue: 15
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 20
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 25
     },
     {
-      size: 'small',
-      color: 'accent',
+      size: IndicatorSize.SMALL,
+      color: IndicatorColor.ACCENT,
       minValue: 30
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 35
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 40
     },
     {
-      size: 'small',
-      color: 'accent',
+      size: IndicatorSize.SMALL,
+      color: IndicatorColor.ACCENT,
       minValue: 45
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 50
     },
     {
-      size: 'small',
+      size: IndicatorSize.SMALL,
       minValue: 55
     },
   ]

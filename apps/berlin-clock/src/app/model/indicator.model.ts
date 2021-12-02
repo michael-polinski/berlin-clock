@@ -1,8 +1,14 @@
+import { IndicatorSize } from './indicator-size.enum';
+import { IndicatorShape } from './indicator-shape.enum';
+import { IndicatorColor } from './indicator-color.enum';
+
 /**
  * TODO
  */
 export interface IndicatorModel {
-  size?: 'small' | 'normal';
-  shape?: 'circle' | 'rectangle';
-  color?: 'primary' | 'accent';
+  size?: IndicatorSize,
+  shape?: IndicatorShape,
+  color?: IndicatorColor,
 }
+
+

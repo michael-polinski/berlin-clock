@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DateProviderService } from '../../services/date-provider.service';
 import { map, Observable } from 'rxjs';
+import { IndicatorShape } from '../../model/indicator-shape.enum';
 import { IndicatorModel } from '../../model/indicator.model';
 
 /**
@@ -14,7 +15,7 @@ import { IndicatorModel } from '../../model/indicator.model';
 export class SecondBarComponent {
 
   model: IndicatorModel = {
-    shape: 'circle'
+    shape: IndicatorShape.CIRCLE
   };
 
   isSecondCountOdd: Observable<boolean>;
