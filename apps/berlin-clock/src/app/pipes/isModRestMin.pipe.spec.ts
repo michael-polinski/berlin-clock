@@ -1,8 +1,8 @@
-import { IsMinModRestPipe } from './isMinModRest.pipe';
+import { IsModRestMinPipe } from './isModRestMin.pipe';
 
 describe('ModPipe', () => {
   it('create an instance', () => {
-    const pipe = new IsMinModRestPipe();
+    const pipe = new IsModRestMinPipe();
     expect(pipe).toBeTruthy();
   });
 });

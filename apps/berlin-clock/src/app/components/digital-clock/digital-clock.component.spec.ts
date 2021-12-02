@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DigitalClockComponent } from './digital-clock.component';
-import {Observable, of} from "rxjs";
 
 /**
  * Test suite for the {@link DigitalClockComponent}.

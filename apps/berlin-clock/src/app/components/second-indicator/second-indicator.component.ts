@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { DateProviderService } from '../../services/date-provider.service';
 import { map, Observable } from 'rxjs';
 
@@ -10,15 +10,12 @@ import { map, Observable } from 'rxjs';
   templateUrl: './second-indicator.component.html',
   styleUrls: ['./second-indicator.component.scss']
 })
-export class SecondIndicatorComponent implements OnInit {
+export class SecondIndicatorComponent {
 
   isSecondCountOdd: Observable<boolean>;
 
   constructor(private dateProviderService: DateProviderService) {
     this.isSecondCountOdd = dateProviderService.date$.pipe(map(date => date.getSeconds() % 2 !== 0));
-  }
-
-  ngOnInit(): void {
   }
 
 }

@@ -1,0 +1,8 @@
+<div
+  class="m-2 rectangle-indicator"
+  [ngClass]="{
+    'is-active-primary': active && model?.color === 'primary',
+    'is-active-accent': active && model?.color === 'accent',
+    'small-sized': model?.size === 'small'
+    }">
+</div>

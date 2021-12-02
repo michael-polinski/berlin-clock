@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DateProviderService } from '../../services/date-provider.service';
 
@@ -11,7 +11,7 @@ import { DateProviderService } from '../../services/date-provider.service';
   templateUrl: './digital-clock.component.html',
   styleUrls: ['./digital-clock.component.scss']
 })
-export class DigitalClockComponent implements OnInit {
+export class DigitalClockComponent {
   /**
    * {@link Observable} of type {@link Date} to provide the current date every second.
    */
@@ -23,12 +23,4 @@ export class DigitalClockComponent implements OnInit {
   constructor(private dateProviderService: DateProviderService) {
     this.dateProvider = dateProviderService.date$;
   }
-
-  /**
-   * Lifecycle hook. Once executed as the component is initialized.
-   */
-  ngOnInit(): void {
-
-  }
-
 }

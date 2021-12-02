@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HoursIndicatorComponent } from './hours-indicator.component';
+import { RectangleIndicatorComponent } from './rectangle-indicator.component';
 
-describe('HoursBaseFiveIndicatorComponent', () => {
-  let component: HoursIndicatorComponent;
-  let fixture: ComponentFixture<HoursIndicatorComponent>;
+describe('RectangleIndicatorComponent', () => {
+  let component: RectangleIndicatorComponent;
+  let fixture: ComponentFixture<RectangleIndicatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HoursIndicatorComponent ]
+      declarations: [ RectangleIndicatorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HoursIndicatorComponent);
+    fixture = TestBed.createComponent(RectangleIndicatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

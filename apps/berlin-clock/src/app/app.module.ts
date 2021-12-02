@@ -5,13 +5,12 @@ import { AppComponent } from './app.component';
 import { DigitalClockComponent } from './components/digital-clock/digital-clock.component';
 import { SecondIndicatorComponent } from './components/second-indicator/second-indicator.component';
 import { BerlinClockComponent } from './components/berlin-clock/berlin-clock.component';
-import { HoursIndicatorComponent } from './components/hours/hours-indicator/hours-indicator.component';
-import { SingleHourIndicatorComponent } from './components/hours/single-hour-indicator/single-hour-indicator.component';
+import { HoursBarComponent } from './components/hours-bar/hours-bar.component';
 import { IsMinPipe } from './pipes/isMin.pipe';
-import { MinutesIndicatorComponent } from './components/minutes/minutes-indicator/minutes-indicator.component';
-import { SingleMinuteBaseFiveIndicatorComponent } from './components/minutes/single-minute-base-five-indicator/single-minute-base-five-indicator.component';
-import { SingleMinuteBaseTwoIndicatorComponent } from './components/minutes/single-minute-base-two-indicator/single-minute-base-two-indicator.component';
-import { IsMinModRestPipe } from './pipes/isMinModRest.pipe';
+import { MinutesBarComponent } from './components/minutes-bar/minutes-bar.component';
+import { IsModRestMinPipe } from './pipes/isModRestMin.pipe';
+import { RectangleIndicatorComponent } from './components/rectangle-indicator/rectangle-indicator.component';
+import { CommonModule } from '@angular/common';
 
 /**
  * Main module for the app.
@@ -19,18 +18,18 @@ import { IsMinModRestPipe } from './pipes/isMinModRest.pipe';
 @NgModule({
   declarations: [
     AppComponent,
+
     DigitalClockComponent,
     SecondIndicatorComponent,
     BerlinClockComponent,
-    HoursIndicatorComponent,
-    SingleHourIndicatorComponent,
+    HoursBarComponent,
+    MinutesBarComponent,
+    RectangleIndicatorComponent,
+
     IsMinPipe,
-    MinutesIndicatorComponent,
-    SingleMinuteBaseFiveIndicatorComponent,
-    SingleMinuteBaseTwoIndicatorComponent,
-    IsMinModRestPipe
+    IsModRestMinPipe
   ],
-  imports: [BrowserModule],
+  imports: [CommonModule, BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })
