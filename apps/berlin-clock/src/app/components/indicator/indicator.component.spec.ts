@@ -8,7 +8,9 @@ describe('RectangleIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndicatorComponent ]
+      declarations: [
+        IndicatorComponent
+      ]
     })
     .compileComponents();
   });

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SecondBarComponent } from './second-bar.component';
+import { IndicatorComponent } from '../indicator/indicator.component';
 
 /**
  * TODO
@@ -11,7 +12,10 @@ describe('SecondIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SecondBarComponent ]
+      declarations: [
+        SecondBarComponent,
+        IndicatorComponent
+      ]
     })
     .compileComponents();
   });

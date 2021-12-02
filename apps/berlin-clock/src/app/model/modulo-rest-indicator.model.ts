@@ -1,5 +1,5 @@
 import { IndicatorModel } from './indicator.model';
-import { ModuloMinimumValuePair } from '../pipes/isModRestMin.pipe';
+import { ModuloMinimumValuePair } from '../pipes/is-modulo-min.pipe';
 
 /**
  * TODO

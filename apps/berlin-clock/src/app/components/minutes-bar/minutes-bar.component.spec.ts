@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MinutesBarComponent } from './minutes-bar.component';
+import { IndicatorComponent } from '../indicator/indicator.component';
+import { IsMinPipe } from '../../pipes/is-min.pipe';
+import { IsModuloMinPipe } from '../../pipes/is-modulo-min.pipe';
 
 describe('MinutesIndicatorComponent', () => {
   let component: MinutesBarComponent;
@@ -8,7 +11,12 @@ describe('MinutesIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MinutesBarComponent ]
+      declarations: [
+        MinutesBarComponent,
+        IndicatorComponent,
+        IsMinPipe,
+        IsModuloMinPipe
+      ]
     })
     .compileComponents();
   });

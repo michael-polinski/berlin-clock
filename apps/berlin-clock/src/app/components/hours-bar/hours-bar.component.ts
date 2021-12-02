@@ -36,28 +36,28 @@ export class HoursBarComponent {
     {
       color: IndicatorColor.ACCENT,
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 1
       }
     },
     {
       color: IndicatorColor.ACCENT,
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 2
       }
     },
     {
       color: IndicatorColor.ACCENT,
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 3
       }
     },
     {
       color: IndicatorColor.ACCENT,
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 4
       }
     }

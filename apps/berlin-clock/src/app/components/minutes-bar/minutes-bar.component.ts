@@ -68,25 +68,25 @@ export class MinutesBarComponent {
   minutesBaseOneData: ModuloRestIndicatorModel[] = [
     {
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 1
       }
     },
     {
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 2
       }
     },
     {
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 3
       }
     },
     {
       model: {
-        modulo: 5,
+        divisor: 5,
         minimum: 4
       }
     }

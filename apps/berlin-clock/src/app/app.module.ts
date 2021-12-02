@@ -6,9 +6,9 @@ import { DigitalClockComponent } from './components/digital-clock/digital-clock.
 import { SecondBarComponent } from './components/second-bar/second-bar.component';
 import { BerlinClockComponent } from './components/berlin-clock/berlin-clock.component';
 import { HoursBarComponent } from './components/hours-bar/hours-bar.component';
-import { IsMinPipe } from './pipes/isMin.pipe';
+import { IsMinPipe } from './pipes/is-min.pipe';
 import { MinutesBarComponent } from './components/minutes-bar/minutes-bar.component';
-import { IsModRestMinPipe } from './pipes/isModRestMin.pipe';
+import { IsModuloMinPipe } from './pipes/is-modulo-min.pipe';
 import { IndicatorComponent } from './components/indicator/indicator.component';
 import { CommonModule } from '@angular/common';
 
@@ -27,7 +27,7 @@ import { CommonModule } from '@angular/common';
     IndicatorComponent,
 
     IsMinPipe,
-    IsModRestMinPipe
+    IsModuloMinPipe
   ],
   imports: [CommonModule, BrowserModule],
   providers: [],

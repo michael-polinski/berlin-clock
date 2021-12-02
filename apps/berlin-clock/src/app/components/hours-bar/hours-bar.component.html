@@ -10,7 +10,7 @@
       <berlin-clock-indicator
         *ngFor="let item of hoursBaseOneData, let i = index"
         [model]="item"
-        [active]="amountOfHours$ | async | isModRestMin: item.model"></berlin-clock-indicator>
+        [active]="amountOfHours$ | async | isModuloMin: item.model"></berlin-clock-indicator>
     </div>
   </div>
 </div>
