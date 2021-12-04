@@ -7,7 +7,8 @@ import { IndicatorSize } from '../../model/indicator-size.enum';
 import { IndicatorColor } from '../../model/indicator-color.enum';
 
 /**
- * TODO
+ * Component to display the minutes of the 'Berlin-clock' (https://en.wikipedia.org/wiki/Mengenlehreuhr). This
+ * component uses the {@link IndicatorComponent} to display its values.
  */
 @Component({
   selector: 'berlin-clock-minutes-bar',
@@ -15,7 +16,13 @@ import { IndicatorColor } from '../../model/indicator-color.enum';
   styleUrls: ['./minutes-bar.component.scss']
 })
 export class MinutesBarComponent {
-
+  /**
+   * {@link MinValueIndicatorModel} to configure the displayed {@link IndicatorComponent}s, which stand for the values
+   * with a base of 5. These kind of minutes should be displayed with a 'small' {@link IndicatorSize} and every
+   * third value should contain the {@link IndicatorColor} 'accent' instead of the default value 'primary'.
+   * Furthermore, every model contains a minimal amount of minutes, which is needed to render this indicator as
+   * 'active'.
+   */
   minutesBaseFiveData: MinValueIndicatorModel[] = [
     {
       size: IndicatorSize.SMALL,
@@ -65,6 +72,13 @@ export class MinutesBarComponent {
       minValue: 55
     },
   ]
+
+  /**
+   * {@link ModuloRestIndicatorModel} to configure the displayed {@link IndicatorComponent}s, which stand for the values
+   * with a base of 1. The configuration uses mostly defaults value from the {@link IndicatorModel}. Nevertheless,
+   * whether or not a single indicator is rendered 'active' depends on the rest of a division with a
+   * certain divisor. The values to use are defined by a {@link ModuloMinimumValuePair}.
+   */
   minutesBaseOneData: ModuloRestIndicatorModel[] = [
     {
       model: {
@@ -92,10 +106,30 @@ export class MinutesBarComponent {
     }
   ]
 
-  amountOfMinutes$: Observable<number>;
+  /**
+   * {@link Observable} which the current time in minutes.
+   */
+  currentTimeInMinutes: Observable<number>;
 
+  /**
+   * Constructor.
+   *
+   * @param dateProviderService {@link DateProviderService} to provide the current {@link Date} containing the
+   *   current time.
+   */
   constructor(private dateProviderService: DateProviderService) {
-    this.amountOfMinutes$ = dateProviderService.date$.pipe(map(date => date.getMinutes()));
+    this.currentTimeInMinutes = dateProviderService.date$.pipe(
+      map(date => MinutesBarComponent.transformToMinutes(date)));
+  }
+
+  /**
+   * Transforms a provided {@link Date} into its time in minutes.
+   *
+   * @param date {@link Date} which should be transformed into the current time in minutes.
+   * @returns {@link number} - the current time in minutes.
+   */
+  static transformToMinutes(date: Date): number {
+    return date.getMinutes();
   }
 
 }

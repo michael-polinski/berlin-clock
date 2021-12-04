@@ -6,7 +6,8 @@ import { ModuloRestIndicatorModel } from '../../model/modulo-rest-indicator.mode
 import { IndicatorColor } from '../../model/indicator-color.enum';
 
 /**
- * TODO
+ * Component to display the hours of the 'Berlin-clock' (https://en.wikipedia.org/wiki/Mengenlehreuhr). This
+ * component uses the {@link IndicatorComponent} to display its values.
  */
 @Component({
   selector: 'berlin-clock-hours-bar',
@@ -14,6 +15,12 @@ import { IndicatorColor } from '../../model/indicator-color.enum';
   styleUrls: ['./hours-bar.component.scss']
 })
 export class HoursBarComponent {
+  /**
+   * {@link MinValueIndicatorModel} to configure the displayed {@link IndicatorComponent}s, which stand for the values
+   * with a base of 5. These kind of hours should be displayed with the {@link IndicatorColor} 'accent'. Furthermore,
+   * every model contains a minimal amount of minutes, which is needed to render this indicator as
+   * 'active'.
+   */
   hoursBaseFiveData: MinValueIndicatorModel[] = [
     {
       color: IndicatorColor.ACCENT,
@@ -32,6 +39,13 @@ export class HoursBarComponent {
       minValue: 20
     }
   ]
+
+  /**
+   * {@link ModuloRestIndicatorModel} to configure the displayed {@link IndicatorComponent}s, which stand for the values
+   * with a base of 1. These kind of hours should be displayed with the {@link IndicatorColor} 'accent'. Nevertheless,
+   * whether or not a single indicator is rendered 'active' depends on the rest of a division with a
+   * certain divisor. The values to use are defined by a {@link ModuloMinimumValuePair}.
+   */
   hoursBaseOneData: ModuloRestIndicatorModel[] = [
     {
       color: IndicatorColor.ACCENT,
@@ -63,9 +77,29 @@ export class HoursBarComponent {
     }
   ]
 
-  amountOfHours$: Observable<number>;
+  /**
+   * {@link Observable} which the current time in hours.
+   */
+  currentTimeInHours$: Observable<number>;
 
+  /**
+   * Constructor.
+   *
+   * @param dateProviderService {@link DateProviderService} to provide the current {@link Date} containing the
+   *   current time.
+   */
   constructor(private dateProviderService: DateProviderService) {
-    this.amountOfHours$ = dateProviderService.date$.pipe(map(date => date.getHours()));
+    this.currentTimeInHours$ = dateProviderService.date$.pipe(
+      map(date => HoursBarComponent.transformToHours(date)));
+  }
+
+  /**
+   * Transforms a provided {@link Date} into its time in hours.
+   *
+   * @param date {@link Date} which should be transformed into the current time in hours.
+   * @returns {@link number} - the current time in hours.
+   */
+  static transformToHours(date: Date): number {
+    return date.getHours();
   }
 }

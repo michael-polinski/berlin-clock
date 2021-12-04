@@ -4,8 +4,6 @@ import { IndicatorShape } from '../../model/indicator-shape.enum';
 import { IndicatorModel } from '../../model/indicator.model';
 import { IndicatorColor } from '../../model/indicator-color.enum';
 
-
-
 /**
  * TODO
  */

@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BerlinClockComponent test that the component should match its snapshot. 1`] = `
+<berlin-clock-berlin-clock
+  __ngContext__={[Function LRootView]}
+>
+  <berlin-clock-second-bar>
+    <div
+      class="d-flex justify-content-center"
+    >
+      <berlin-clock-indicator>
+        <div
+          class="m-2 indicator circle-indicator"
+        />
+      </berlin-clock-indicator>
+    </div>
+  </berlin-clock-second-bar><berlin-clock-hours-bar>
+    <div
+      class="d-flex justify-content-center"
+    >
+      <div
+        class="d-flex flex-column"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+        </div>
+        <div
+          class="d-flex flex-row"
+        >
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+        </div>
+      </div>
+    </div>
+  </berlin-clock-hours-bar><berlin-clock-minutes-bar>
+    <div
+      class="d-flex justify-content-center"
+    >
+      <div
+        class="d-flex flex-column"
+      >
+        <div
+          class="d-flex flex-row justify-content-center"
+        >
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator small-rectangle"
+            />
+          </berlin-clock-indicator>
+        </div>
+        <div
+          class="d-flex flex-row"
+        >
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+          <berlin-clock-indicator>
+            <div
+              class="m-2 indicator rectangle-indicator"
+            />
+          </berlin-clock-indicator>
+        </div>
+      </div>
+    </div>
+  </berlin-clock-minutes-bar>
+</berlin-clock-berlin-clock>
+`;

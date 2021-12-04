@@ -4,13 +4,13 @@
       <berlin-clock-indicator
         *ngFor="let item of minutesBaseFiveData"
         [model]="item"
-        [active]="amountOfMinutes$ | async | isMin: item.minValue"></berlin-clock-indicator>
+        [active]="currentTimeInMinutes | async | isMin: item.minValue"></berlin-clock-indicator>
     </div>
     <div class="d-flex flex-row">
       <berlin-clock-indicator
         *ngFor="let item of minutesBaseOneData, let i = index"
         [model]="item"
-        [active]="amountOfMinutes$ | async | isModuloMin: item.model"></berlin-clock-indicator>
+        [active]="currentTimeInMinutes | async | isModuloMin: item.model"></berlin-clock-indicator>
     </div>
   </div>
 </div>

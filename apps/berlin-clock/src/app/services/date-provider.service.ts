@@ -15,7 +15,8 @@ export class DateProviderService {
    */
   static readonly TICK_INTERVAL = 500;
   /**
-   * TODO
+   *  {@link Observable} that emits a fresh {@link Date} in a specified interval. The interval is defined by the
+   *  constant 'TICK_INTERVAL'.
    */
   readonly date$ = new Observable<Date>((observer) => {
     setInterval(() => {

@@ -1,8 +1,13 @@
 import { IsModuloMinPipe } from './is-modulo-min.pipe';
 
 describe('IsModuloMinPipe', () => {
+  let pipe: IsModuloMinPipe;
+
+  beforeEach(() => {
+    pipe = new IsModuloMinPipe();
+  });
+
   it('test that the pipe should create without an error.', () => {
-    const pipe = new IsModuloMinPipe();
     expect(pipe).toBeTruthy();
   });
 
@@ -14,7 +19,6 @@ describe('IsModuloMinPipe', () => {
     ${1}          | ${2}           | ${2}   | ${false}
   `(`test that the pipe returns the expected result for a provided value.`,
     async ({ providedValue, providedModulo,  providedMinimum, expectedResult }) => {
-      const pipe = new IsModuloMinPipe();
       const providedValuePair = {
         divisor: providedModulo,
         minimum: providedMinimum

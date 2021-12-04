@@ -8,9 +8,6 @@ import { IsMinPipe } from '../../pipes/is-min.pipe';
 import { IsModuloMinPipe } from '../../pipes/is-modulo-min.pipe';
 import { IndicatorComponent } from '../indicator/indicator.component';
 
-/**
- * TODO
- */
 describe('BerlinClockComponent', () => {
   let component: BerlinClockComponent;
   let fixture: ComponentFixture<BerlinClockComponent>;
@@ -36,7 +33,11 @@ describe('BerlinClockComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it(`test that the component should create without an error.`, () => {
     expect(component).toBeTruthy();
+  });
+
+  it('test that the component should match its snapshot.', () => {
+    expect(fixture).toMatchSnapshot();
   });
 });
