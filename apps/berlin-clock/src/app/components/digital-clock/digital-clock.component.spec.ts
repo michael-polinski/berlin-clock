@@ -1,33 +1,33 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DigitalClockComponent } from './digital-clock.component';
+import { DateProviderService } from '../../services/date-provider.service';
+import { of } from 'rxjs';
 
 /**
  * Test suite for the {@link DigitalClockComponent}.
  */
 describe('DigitalClockComponent', () => {
-  /**
-   * Subject under test.
-   */
+  const date = new Date();
+
   let component: DigitalClockComponent;
-  /**
-   * The subject under test's {@link ComponentFixture}.
-   */
   let fixture: ComponentFixture<DigitalClockComponent>;
 
-  /**
-   * Async test setup to configure the test bed.
-   */
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DigitalClockComponent ]
+      declarations: [ DigitalClockComponent ],
+      providers: [
+        {
+          provide: DateProviderService,
+          useValue: {
+            date$: of(date)
+          }
+        }
+      ]
     })
     .compileComponents();
   });
 
-  /**
-   * Test setup to inject all needed dependencies.
-   */
   beforeEach(() => {
     fixture = TestBed.createComponent(DigitalClockComponent);
     component = fixture.componentInstance;
