@@ -10,10 +10,10 @@ import { Observable } from 'rxjs';
 export class DateProviderService {
 
   /**
-   * Interval in which a fresh {@link Date} should be provided. The tick is less than a second to provide a smooth
+   * Interval in which a fresh {@link Date} should be provided. The tick is way less than a second to provide a smooth
    * entry if the first subscriber is too close to the switch of a second.
    */
-  static readonly TICK_INTERVAL = 500;
+  static readonly TICK_INTERVAL = 10;
   /**
    *  {@link Observable} that emits a fresh {@link Date} in a specified interval. The interval is defined by the
    *  constant 'TICK_INTERVAL'.
