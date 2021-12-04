@@ -3,6 +3,7 @@ import { DateProviderService } from '../../services/date-provider.service';
 import { map, Observable } from 'rxjs';
 import { IndicatorShape } from '../../model/indicator-shape.enum';
 import { IndicatorModel } from '../../model/indicator.model';
+import { IndicatorSize } from '../../model/indicator-size.enum';
 
 /**
  * Component to display the seconds of the 'Berlin-clock' (https://en.wikipedia.org/wiki/Mengenlehreuhr). This

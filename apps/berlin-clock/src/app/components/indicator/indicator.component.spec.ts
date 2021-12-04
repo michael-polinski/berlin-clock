@@ -4,8 +4,6 @@ import { IndicatorComponent } from './indicator.component';
 import { IndicatorSize } from '../../model/indicator-size.enum';
 import { IndicatorShape } from '../../model/indicator-shape.enum';
 import { IndicatorColor } from '../../model/indicator-color.enum';
-import { MinutesBarComponent } from '../minutes-bar/minutes-bar.component';
-import { By } from '@angular/platform-browser';
 
 describe('RectangleIndicatorComponent', () => {
   let component: IndicatorComponent;
