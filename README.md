@@ -1,105 +1,73 @@
-
-
 # BerlinClock
 
-This project was generated using [Nx](https://nx.dev).
+## Introduction
+This repository holds an app that is displaying the current time in the style of the 'Berlin Clock'. This app has
+been implemented as an assessment by a company during their application process. Therefore, there have been some
+restrictions to the process of creating this app:
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+1. I should not use any 3rd party library to implement the logic behind the clock. 
+2. I was encouraged to align to the company's tech stack, which means that the app would be realized with [Angular](https://angular.io/).
+3. I should put a focus on creating 'Clean code'
 
-🔎 **Smart, Extensible Build Framework**
+Further restriction applied can be found under [Additional information](#additional-information).
 
-## Quick Start & Documentation
+To have a look at the result, you can either check out this repository and start the application, or you have
+a look at the [App](https://berlinclock-e5738.web.app/) I deployed via [Google Firebase](https://firebase.google.com/). 
 
-[Nx Documentation](https://nx.dev/angular)
+## What is the 'Berlin Clock'?
+The 'Berlin Clock' is a clock that tells the time by a distinct set of illuminated fields. The seconds are displayed 
+by a round yellow circle at the top, the minutes by rectangles at the bottom and the hours likewise by rectangles in 
+between. 
 
-[10-minute video showing all Nx features](https://nx.dev/getting-started/intro)
+Aside from the seconds, which are only displayed as being even ('off') or odd ('on'), the other indicators
+follow a more complex scheme: The hours are divided into four fields standing for an hourly value to the base of five 
+and four fields that represent a value to the base of one. With combinations between these eight red colored fields, 
+all possible 24 hours of a day can be displayed. 
 
-[Interactive Tutorial](https://nx.dev/tutorial/01-create-application)
+The minutes are displayed in a similar way: Eleven alternating colored fields indicate values to the base of five and 
+four yellow colored fields represent values to the base of one. The alternating colored fields are yellow with every
+third field being red colored as an accent. With combinations between these fields all possible 60 hours of an hour 
+can be displayed.
 
-## Adding capabilities to your workspace
+You can find more information on the [Wikipedia Page](https://en.wikipedia.org/wiki/Mengenlehreuhr) for this clock.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+## Additional information
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+Under this section you find some questions and answers to gain a bit more insight why some parts of this assessment
+have been implemented in a certain way. 
 
-Below are our core plugins:
+#### Why did you set up a [Nx](https://nx.dev/) project and not a plain angular app?
+Because I am used to working with Nx and Nx provides an out-of-the-box support for [jest](https://jestjs.io/), which I prefer over [jasmine](https://jasmine.github.io/).
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+#### Why don't you apply to the [Nx](https://nx.dev/) conventions and write your code inside the app and not inside one or more libraries?
+Because the company I did this assessment for does not use [Nx](https://nx.dev/), so I wanted stay as close to a 'vanilla' Angular app
+as possible and a multi-library-structure would have not suited this target.
 
-There are also many [community plugins](https://nx.dev/community) you could add.
+#### Why did you use [commitizen](https://commitizen-tools.github.io/commitizen/)?
+Because I am a fan of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) and commitizen is a
+quick and easy way to support me to stick to the conventions.
 
-## Generate an application
+#### Why did you use [bootstrap](https://getbootstrap.com/)?
+Because I am used to designing my UI with bootstrap and this helps me to save time in the assessment.
 
-Run `ng g @nrwl/angular:app my-app` to generate an application.
+#### Why did you not use XY, why did you not write XY, ... ?
+There are a ton of questions this point should cover, like 'Why did you not write E2E-Test?' or 'Why did you not
+use tailwindcss instead of bootstrap?' and - apart from sometimes obvious reasons - it all boils down to the time
+I had to create this assessment. Although there were no *real* time limit, like 'Do not take more than 4 hours', it
+is still just an assessment with a certain scope. So I decided myself for a definition of done and focused on using
+the technology I am familiar with to reach this goal.
 
-> You can use any of the plugins above to generate applications as well.
+#### Will you expand this app in the future?
+Could be or could not be. To be honest, I'm not quite sure right now.
 
-When using Nx, you can create multiple applications and libraries in the same workspace.
+## Useful links
 
-## Generate a library
-
-Run `ng g @nrwl/angular:lib my-lib` to generate a library.
-
-> You can also use any of the plugins above to generate libraries as well.
-
-Libraries are shareable across libraries and applications. They can be imported from `@berlin-clock/mylib`.
-
-## Development server
-
-Run `ng serve my-app` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng g component my-component --project=my-app` to generate a new component.
-
-## Build
-
-Run `ng build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
-
-## Running end-to-end tests
-
-Run `ng e2e my-app` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
-
-Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
-
-## Understand your workspace
-
-Run `nx dep-graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
-
-## ☁ Nx Cloud
-
-### Distributed Computation Caching & Distributed Task Execution
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-cloud-card.png"></p>
-
-Nx Cloud pairs with Nx in order to enable you to build and test code more rapidly, by up to 10 times. Even teams that are new to Nx can connect to Nx Cloud and start saving time instantly.
-
-Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
-
-Visit [Nx Cloud](https://nx.app/) to learn more.
+* [The hosted App](https://berlinclock-e5738.web.app/)
+* [Angular](https://angular.io/)
+* [Nx Documentation](https://nx.dev/angular)
+* [Google Firebase](https://firebase.google.com/)
+* [commitizen](https://commitizen-tools.github.io/commitizen/)
+* [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+* [jest](https://jestjs.io/)
+* [jasmine](https://jasmine.github.io/)
+* [bootstrap](https://getbootstrap.com/)
